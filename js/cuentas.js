@@ -48,6 +48,7 @@ document.getElementById("formCuentas").addEventListener("submit", function(event
 
 // Variables para almacenar los totales
 let totalActivos = 0;
+let totalPasivos = 0;
 let totalPatrimonios = 0;
 let totalIngresos = 0;
 let totalEgresos = 0;
@@ -74,6 +75,9 @@ document.getElementById('formCuentas').addEventListener('submit', function (e) {
         case 'activos':
             totalActivos += valorCuenta;
             break;
+         case 'pasivos':
+            totalPasivos += valorCuenta;
+            break;
         case 'patrimonios':
             totalPatrimonios += valorCuenta;
             break;
@@ -97,7 +101,7 @@ document.getElementById('formCuentas').addEventListener('submit', function (e) {
 // Función para actualizar los resultados en el DOM
 function actualizarResultados() {
     // Cálculo de activos y pasivos
-    const activosTotales = totalActivos + totalPatrimonios;
+    const activosTotales = totalPasivos + totalPatrimonios;
     const pasivosTotales = totalActivos - totalPatrimonios;
 
     // Actualizar los elementos en la interfaz
