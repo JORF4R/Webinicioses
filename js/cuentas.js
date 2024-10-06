@@ -97,7 +97,7 @@ document.getElementById('formCuentas').addEventListener('submit', function (e) {
 // Función para actualizar los resultados en el DOM
 function actualizarResultados() {
     // Cálculo de activos y pasivos
-    const activosTotales = totalPasivos + totalPatrimonios;
+    const activosTotales = totalActivos + totalPatrimonios;
     const pasivosTotales = totalActivos - totalPatrimonios;
 
     // Actualizar los elementos en la interfaz
